@@ -35,7 +35,10 @@
                   <td>Trident</td>
                   <td>Internet
                     Explorer 4.0</td>
-                  <td></td>
+                  <td>
+                    <a href="#" class="icon_link"><i class="fa fa-pencil"></i></a>
+                    <a href="#" class="icon_link"><i class="fa fa-remove"></i></a>
+                  </td>
                 </tr>
                 </tbody>
               </table>
