@@ -239,5 +239,20 @@
 <script src="<?php echo base_url(); ?>template/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>template/dist/js/demo.js"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url(); ?>template/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url(); ?>template/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script>
+  $(function () {
+    $('#category').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
 </body>
 </html>
