@@ -320,8 +320,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url(); ?>category"><i class="fa fa-circle-o"></i> Categoría</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Presentación</a></li>
-            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Marca</a></li>
+            <li><a href="<?php echo base_url(); ?>presentation"><i class="fa fa-circle-o"></i> Presentación</a></li>
+            <li><a href="<?php echo base_url(); ?>brand"><i class="fa fa-circle-o"></i> Marca</a></li>
             <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Producto</a></li>
           </ul>
         </li>
