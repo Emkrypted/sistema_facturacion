@@ -2,6 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Category extends CI_Controller {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('category_model');
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -42,11 +47,9 @@ class Category extends CI_Controller {
 	 */
 	public function create()
 	{
-		$data['category'] = $this->category_model->getCategories();
-			
-		$this->load->view('front/header', $data);
-		$this->load->view('front/createcategory', $data);
-		$this->load->view('front/footer', $data);
+		$this->load->view('header');
+		$this->load->view('createcategory');
+		$this->load->view('footer');
 	}
 
 	/**
