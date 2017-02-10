@@ -4,7 +4,7 @@
     <section class="content-header">
       <h1>
         Categorías
-        <a href="#"><button type="submit" class="btn btn-warning">Agregar</button></a>
+        <a href="<?php echo base_url(); ?>category/create"><button type="submit" class="btn btn-warning">Agregar</button></a>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
