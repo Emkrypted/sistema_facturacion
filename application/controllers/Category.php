@@ -28,7 +28,7 @@ class Category extends CI_Controller {
 		$data['categories'] = $this->category_model->getCategories();
 
 		$this->load->view('header');
-		$this->load->view('category');
+		$this->load->view('category', $data);
 		$this->load->view('footer');
 	}
 
