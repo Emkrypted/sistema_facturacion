@@ -16,32 +16,106 @@
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title"></h3>
+         <?php
+          if($this->session->userdata('status_category') == 1)
+          {
+          ?>
+            <div style="padding:10px;">&nbsp;</div>
+            <div class="alert alert-success">
+              Guardado con <strong>Exito!</strong>.
             </div>
+          <?php
+            $data = array(
+                'status_category' => '0',
+              );
+
+            $this->session->set_userdata($data);
+          }
+          ?>
+          <?php
+          if($this->session->userdata('status_delete') == 1)
+          {
+          ?>
+            <div style="padding:10px;">&nbsp;</div>
+            <div class="alert alert-success">
+              Borrado con <strong>Exito!</strong>.
+            </div>
+          <?php
+            $data = array(
+                'status_delete' => '0',
+              );
+
+            $this->session->set_userdata($data);
+          }
+          ?>
+          <?php
+          if($this->session->userdata('status_update') == 1)
+          {
+          ?>
+            <div style="padding:10px;">&nbsp;</div>
+            <div class="alert alert-success">
+              Actualizado con <strong>Exito!</strong>.
+            </div>
+          <?php
+            $data = array(
+                'status_update' => '0',
+              );
+
+            $this->session->set_userdata($data);
+          }
+          ?>
+          <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="category" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Id</th>
-                  <th>Categoría</th>
-                  <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0</td>
-                  <td>
-                    <a href="#" class="icon_link"><i class="fa fa-pencil"></i></a>
-                    <a href="#" class="icon_link"><i class="fa fa-remove"></i></a>
-                  </td>
-                </tr>
-                </tbody>
-              </table>
+              <?php
+              if($categories != false)
+              {
+              ?>
+                <table id="category" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Categoría</th>
+                    <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <?php
+                  foreach($categories->result() as $category)
+                  {
+                  ?>
+                    <tr>
+                      <td>
+                        <?php echo $category->id_category; ?>
+                      </td>
+                      <td>
+                        <?php echo $category->category; ?>
+                      </td>
+                      <td>
+                        <a href="#" class="icon_link"><i class="fa fa-pencil"></i></a>
+                        <a href="#" class="icon_link"><i class="fa fa-remove"></i></a>
+                      </td>
+                    </tr>
+                  <?php
+                  }
+                  ?>
+                  </tbody>
+                </table>
+              <?php
+              }
+              else
+              {
+              ?>
+                <table>
+                  <tr>
+                    <td>
+                      No hay registro
+                    </td>
+                  </tr>
+                </table>
+              <?php
+              }
+              ?>
             </div>
             <!-- /.box-body -->
           </div>
@@ -54,4 +128,4 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- 
+   

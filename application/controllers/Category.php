@@ -25,6 +25,8 @@ class Category extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['categories'] = $this->category_model->getCategories();
+
 		$this->load->view('header');
 		$this->load->view('category');
 		$this->load->view('footer');
@@ -81,7 +83,7 @@ class Category extends CI_Controller {
 
 			$this->session->set_userdata($data);
 
-			redirect('category');
+			redirect('categories');
 		}
 		else
 		{
@@ -91,7 +93,7 @@ class Category extends CI_Controller {
 
 			$this->session->set_userdata($data);
 
-			redirect('category');
+			redirect('categories');
 		}
 	}
 }

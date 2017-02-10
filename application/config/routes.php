@@ -53,7 +53,7 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['category'] = 'category';
+$route['categories'] = 'category';
 $route['category/create'] = 'category/create';
 $route['category/store'] = 'category/store';
 
