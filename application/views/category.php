@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-xs-12">
          <?php
-          if($this->session->userdata('status_category') == 1)
+          if($this->session->userdata('status_store') == 1)
           {
           ?>
             <div style="padding:10px;">&nbsp;</div>
@@ -26,7 +26,7 @@
             </div>
           <?php
             $data = array(
-                'status_category' => '0',
+                'status_store' => '0',
               );
 
             $this->session->set_userdata($data);
@@ -92,8 +92,8 @@
                         <?php echo $category->category; ?>
                       </td>
                       <td>
-                        <a href="#" class="icon_link"><i class="fa fa-pencil"></i></a>
-                        <a href="#" class="icon_link"><i class="fa fa-remove"></i></a>
+                        <a href="<?php echo base_url(); ?>category/edit/<?php echo $category->id_category; ?>" class="icon_link"><i class="fa fa-pencil"></i></a>
+                        <a href="<?php echo base_url(); ?>category/destroy/<?php echo $category->id_category; ?>" class="icon_link"><i class="fa fa-remove"></i></a>
                       </td>
                     </tr>
                   <?php
