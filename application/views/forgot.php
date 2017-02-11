@@ -31,26 +31,22 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg" style="font-weight: bolder;">Iniciar Sesión</p>
+    <p class="login-box-msg" style="font-weight: bolder;">¿Olvidó Contraseña?</p>
 
     <form action="<?php echo base_url(); ?>template/index2.html" method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Contraseña">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
       <div class="row">
         <div class="col-xs-8">
           <div>
-          <a href="<?php echo base_url(); ?>forgot" style="color: #ffffff;">¿Olvido su Contraseña?</a><br>
+          <a href="<?php echo base_url(); ?>login" style="color: #ffffff;">Regresar</a><br>
           </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-danger btn-block btn-flat">Ingresar</button>
+          <button type="submit" class="btn btn-danger btn-block btn-flat">Enviar</button>
         </div>
         <!-- /.col -->
       </div>
