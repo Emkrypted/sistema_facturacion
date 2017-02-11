@@ -1,13 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Brand extends CI_Controller {
+class User extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('brand_model');
 	}
-
 
 	/**
 	 * Index Page for this controller.
@@ -24,12 +22,8 @@ class Brand extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function login()
 	{
-		$data['brands'] = $this->brand_model->getBrands();
-
-		$this->load->view('header');
-		$this->load->view('brand', $data);
-		$this->load->view('footer');
+		$this->load->view('login');
 	}
 }
