@@ -35,11 +35,11 @@ class Presentation_model extends CI_Model {
 		}
 	}
 
-	function getCategory($data)
+	function getPresentation($data)
 	{
 		$this->db->select('*');
-		$this->db->from('categories');
-		$this->db->where('id_category = '.$data['id_category']);
+		$this->db->from('presentations');
+		$this->db->where('id_presentation = '.$data['id_presentation']);
 		
 		$query = $this->db->get()->result();
 
@@ -53,11 +53,11 @@ class Presentation_model extends CI_Model {
 		}
 	}
 	
-	function updateCategory($data)
+	function updatePresentation($data)
 	{
-		$this->db->set('category', $data['category']);
-		$this->db->where('id_category',  $data['id_category']);
-		$query = $this->db->update('categories');
+		$this->db->set('presentation', $data['presentation']);
+		$this->db->where('id_presentation',  $data['id_presentation']);
+		$query = $this->db->update('presentations');
 		
 		if($query)
 		{

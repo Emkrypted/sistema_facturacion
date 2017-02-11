@@ -25,6 +25,7 @@
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
+                <input type="hidden" value="<?php echo $presentation[0]->id_presentation; ?>" class="form-control" name="id_presentation">
                 <button type="submit" class="btn btn-success">Editar</button>
                 <a href="<?php echo base_url(); ?>presentation" class="icon_link"><button type="button" class="btn btn-default">Regresar</button></a>
               </div>

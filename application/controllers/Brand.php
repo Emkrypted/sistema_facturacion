@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Brand extends CI_Controller {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('brand_model');
+	}
+
 
 	/**
 	 * Index Page for this controller.
@@ -20,8 +26,10 @@ class Brand extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['brands'] = $this->brand_model->getBrands();
+
 		$this->load->view('header');
-		$this->load->view('brand');
+		$this->load->view('brand', $data);
 		$this->load->view('footer');
 	}
 }
