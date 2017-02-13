@@ -63,7 +63,7 @@
       <ul class="sidebar-menu">
         <li class="header">MENÚ</li>
         <li>
-          <a href="#">
+          <a href="<?php echo base_url(); ?>">
             <i class="fa fa-dashboard"></i> <span>Inicio</span>
           </a>
         </li>
@@ -78,7 +78,7 @@
             <li><a href="<?php echo base_url(); ?>category"><i class="fa fa-circle-o"></i> Categoría</a></li>
             <li><a href="<?php echo base_url(); ?>presentation"><i class="fa fa-circle-o"></i> Presentación</a></li>
             <li><a href="<?php echo base_url(); ?>brand"><i class="fa fa-circle-o"></i> Marca</a></li>
-            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Producto</a></li>
+            <li><a href="<?php echo base_url(); ?>product"><i class="fa fa-circle-o"></i> Producto</a></li>
           </ul>
         </li>
         <li>
@@ -88,6 +88,10 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url(); ?>supplier"><i class="fa fa-circle-o"></i> Proveedor</a></li>
+            <li><a href="<?php echo base_url(); ?>buy"><i class="fa fa-circle-o"></i> Compras</a></li>
+          </ul>
         </li>
         <li>
           <a href="#">
@@ -96,6 +100,19 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Inventarios</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url(); ?>category"><i class="fa fa-circle-o"></i> Inventario Inicial</a></li>
+            <li><a href="<?php echo base_url(); ?>presentation"><i class="fa fa-circle-o"></i> Abrir Nuevo Inventario</a></li>
+            <li><a href="<?php echo base_url(); ?>brand"><i class="fa fa-circle-o"></i> Saldos y Movimientos</a></li>
+          </ul>
         </li>
       </ul>
     </section>

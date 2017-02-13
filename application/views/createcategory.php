@@ -26,7 +26,7 @@
               <!-- /.box-body -->
               <div class="box-footer">
                 <button type="submit" class="btn btn-success">Guardar</button>
-                <a href="<?php echo base_url(); ?>categories" class="icon_link"><button type="button" class="btn btn-default">Regresar</button></a>
+                <a href="<?php echo base_url(); ?>category" class="icon_link"><button type="button" class="btn btn-default">Regresar</button></a>
               </div>
             </form>
           </div>

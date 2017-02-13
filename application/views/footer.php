@@ -1,9 +1,5 @@
 <footer class="main-footer" style="background-color: #FDFDFD;">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.7
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy; <?php echo date('Y'); ?> <a href="#">Grupo Sosa</a>.</strong> Todos los Derechos Reservados.
   </footer>
 
   <!-- Add the sidebar's background. This div must be placed

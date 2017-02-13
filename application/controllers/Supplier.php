@@ -1,11 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Brand extends CI_Controller {
+class Supplier extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('brand_model');
+		$this->load->model('supplier_model');
+		$this->load->model('taxpaper_model');
 	}
 
 
@@ -26,10 +27,10 @@ class Brand extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['brands'] = $this->brand_model->getBrands();
+		$data['suppliers'] = $this->supplier_model->getSuppliers();
 
 		$this->load->view('header');
-		$this->load->view('brand', $data);
+		$this->load->view('supplier', $data);
 		$this->load->view('footer');
 	}
 
@@ -50,8 +51,10 @@ class Brand extends CI_Controller {
 	 */
 	public function create()
 	{
+		$data['taxpapers'] = $this->taxpaper_model->getTaxpapers();
+
 		$this->load->view('header');
-		$this->load->view('createbrand');
+		$this->load->view('createsupplier', $data);
 		$this->load->view('footer');
 	}
 
@@ -71,10 +74,14 @@ class Brand extends CI_Controller {
 	public function store()
 	{
 		$data = array(
-					'brand' => $this->input->post('brand')
+					'id_taxpaper' => $this->input->post('id_taxpaper'),
+					'identification_number' => $this->input->post('identification_number'),
+					'company_name' => $this->input->post('company_name'),
+					'representative' => $this->input->post('representative'),
+					'phone' => $this->input->post('phone')
 				);
 					
-		$query = $this->brand_model->storeBrand($data);
+		$query = $this->supplier_model->storeSupplier($data);
 
 		if($query)
 		{
@@ -93,7 +100,7 @@ class Brand extends CI_Controller {
 			$this->session->set_userdata($data);
 		}
 
-		redirect('brand');
+		redirect('supplier');
 	}
 
 	/**
@@ -113,7 +120,7 @@ class Brand extends CI_Controller {
 	{
 		$id = $this->uri->segment(3);
 
-		$query = $this->db->delete('brands', array('id_brand' => $id));
+		$query = $this->db->delete('suppliers', array('id_supplier' => $id));
 
 		if($query)
 		{
@@ -134,7 +141,7 @@ class Brand extends CI_Controller {
 			$this->session->set_userdata($data);
 		}
 
-		redirect('brand');
+		redirect('supplier');
 	}
 
 	/**
@@ -155,13 +162,14 @@ class Brand extends CI_Controller {
 		$id = $this->uri->segment(3);
 			
 		$data = array(
-					'id_brand' => $id
+					'id_supplier' => $id
 					);
 		
-		$data['brand'] = $this->brand_model->getBrand($data);
+		$data['supplier'] = $this->supplier_model->getSupplier($data);
+		$data['taxpapers'] = $this->taxpaper_model->getTaxpapers();
 
 		$this->load->view('header');
-		$this->load->view('editbrand', $data);
+		$this->load->view('editsupplier', $data);
 		$this->load->view('footer');
 	}
 
@@ -182,7 +190,7 @@ class Brand extends CI_Controller {
 	{
 		$data = $this->input->post();
 
-		$this->brand_model->updateBrand($data);
+		$this->supplier_model->updateSupplier($data);
 
 		$data = array(
 					'status_update' => '1',
@@ -190,6 +198,6 @@ class Brand extends CI_Controller {
 
 		$this->session->set_userdata($data);
 		
-		redirect('brand');
+		redirect('supplier');
 	}
 }

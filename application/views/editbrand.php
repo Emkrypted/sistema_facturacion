@@ -10,24 +10,24 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Editar Categoría</h3>
+              <h3 class="box-title">Editar Marca</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" action="<?php echo base_url(); ?>category/update" method="post">
+            <form role="form" action="<?php echo base_url(); ?>brand/update" method="post">
               <div class="box-body">
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nombre</label>
-                    <input type="text" value="<?php echo $category[0]->category; ?>" class="form-control" name="category" placeholder="Nombre">
+                    <input type="text" value="<?php echo $brand[0]->brand; ?>" class="form-control" name="brand" placeholder="Nombre">
                   </div>
                 </div>
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
-                <input type="hidden" value="<?php echo $category[0]->id_category; ?>" class="form-control" name="id_category" placeholder="Nombre">
+                <input type="hidden" value="<?php echo $brand[0]->id_brand; ?>" class="form-control" name="id_brand" placeholder="Nombre">
                 <button type="submit" class="btn btn-success">Editar</button>
-                <a href="<?php echo base_url(); ?>category" class="icon_link"><button type="button" class="btn btn-default">Regresar</button></a>
+                <a href="<?php echo base_url(); ?>brand" class="icon_link"><button type="button" class="btn btn-default">Regresar</button></a>
               </div>
             </form>
           </div>

@@ -3,12 +3,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Marcas
-        <a href="<?php echo base_url(); ?>brand/create"><button type="submit" class="btn btn-warning">Agregar</button></a>
+        Productos
+        <a href="<?php echo base_url(); ?>product/create"><button type="submit" class="btn btn-warning">Agregar</button></a>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li><a href="#">Marcas</a></li>
+        <li><a href="#">Productos</a></li>
       </ol>
     </section>
 
@@ -68,32 +68,56 @@
             <!-- /.box-header -->
             <div class="box-body">
               <?php
-              if($brands != false)
+              if($products != false)
               {
               ?>
                 <table id="category" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>Id</th>
+                    <th>Producto</th>
                     <th>Marca</th>
+                    <th>Presentación</th>
+                    <th>Minimo</th>
+                    <th>Stock</th>
+                    <th>Compra</th>
+                    <th>Precio</th>
                     <th></th>
                   </tr>
                   </thead>
                   <tbody>
                   <?php
-                  foreach($brands->result() as $brand)
+                  foreach($products->result() as $product)
                   {
                   ?>
                     <tr>
                       <td>
-                        <?php echo $brand->id_brand; ?>
+                        <?php echo $product->id_product; ?>
                       </td>
                       <td>
-                        <?php echo $brand->brand; ?>
+                        <?php echo $product->product; ?>
                       </td>
                       <td>
-                        <a href="<?php echo base_url(); ?>brand/edit/<?php echo $brand->id_brand; ?>" class="icon_link"><i class="fa fa-pencil"></i></a>
-                        <a href="<?php echo base_url(); ?>brand/destroy/<?php echo $brand->id_brand; ?>" class="icon_link"><i class="fa fa-remove"></i></a>
+                        <?php echo $product->brand; ?>
+                      </td>
+                      <td>
+                        <?php echo $product->presentation; ?>
+                      </td>
+                      <td>
+                        <?php echo $product->minimal; ?>
+                      </td>
+                      <td>
+                        <?php echo $product->stock; ?>
+                      </td>
+                      <td>
+                        <?php echo $product->buy_price; ?>
+                      </td>
+                      <td>
+                        <?php echo $product->sell_price; ?>
+                      </td>
+                      <td>
+                        <a href="<?php echo base_url(); ?>product/edit/<?php echo $product->id_product; ?>" class="icon_link"><i class="fa fa-pencil"></i></a>
+                        <a href="<?php echo base_url(); ?>product/destroy/<?php echo $product->id_product; ?>" class="icon_link"><i class="fa fa-remove"></i></a>
                       </td>
                     </tr>
                   <?php

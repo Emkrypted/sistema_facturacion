@@ -24,7 +24,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		if($this->session->userdata('id_user'))
+		if($this->session->userdata('id_user') != NULL)
 		{
 			$this->load->view('header');
 			$this->load->view('index');

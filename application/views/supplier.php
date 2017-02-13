@@ -3,12 +3,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Marcas
-        <a href="<?php echo base_url(); ?>brand/create"><button type="submit" class="btn btn-warning">Agregar</button></a>
+        Proveedores
+        <a href="<?php echo base_url(); ?>supplier/create"><button type="submit" class="btn btn-warning">Agregar</button></a>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li><a href="#">Marcas</a></li>
+        <li><a href="#">Proveedores</a></li>
       </ol>
     </section>
 
@@ -68,32 +68,48 @@
             <!-- /.box-header -->
             <div class="box-body">
               <?php
-              if($brands != false)
+              if($suppliers != false)
               {
               ?>
                 <table id="category" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>Id</th>
-                    <th>Marca</th>
+                    <th>RIF</th>
+                    <th>Razón Social</th>
+                    <th>Tipo de Contribuyente</th>
+                    <th>Representante</th>
+                    <th>Teléfono</th>
                     <th></th>
                   </tr>
                   </thead>
                   <tbody>
                   <?php
-                  foreach($brands->result() as $brand)
+                  foreach($suppliers->result() as $supplier)
                   {
                   ?>
                     <tr>
                       <td>
-                        <?php echo $brand->id_brand; ?>
+                        <?php echo $supplier->id_supplier; ?>
                       </td>
                       <td>
-                        <?php echo $brand->brand; ?>
+                        <?php echo $supplier->identification_number; ?>
                       </td>
                       <td>
-                        <a href="<?php echo base_url(); ?>brand/edit/<?php echo $brand->id_brand; ?>" class="icon_link"><i class="fa fa-pencil"></i></a>
-                        <a href="<?php echo base_url(); ?>brand/destroy/<?php echo $brand->id_brand; ?>" class="icon_link"><i class="fa fa-remove"></i></a>
+                        <?php echo $supplier->company_name; ?>
+                      </td>
+                      <td>
+                        <?php echo $supplier->taxpaper; ?>
+                      </td>
+                      <td>
+                        <?php echo $supplier->representative; ?>
+                      </td>
+                      <td>
+                        <?php echo $supplier->phone; ?>
+                      </td>
+                      <td>
+                        <a href="<?php echo base_url(); ?>supplier/edit/<?php echo $supplier->id_supplier; ?>" class="icon_link"><i class="fa fa-pencil"></i></a>
+                        <a href="<?php echo base_url(); ?>supplier/destroy/<?php echo $supplier->id_supplier; ?>" class="icon_link"><i class="fa fa-remove"></i></a>
                       </td>
                     </tr>
                   <?php

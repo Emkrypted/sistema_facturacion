@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Brand extends CI_Controller {
+class Product extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('brand_model');
+		$this->load->model('product_model');
 	}
 
 
@@ -26,10 +26,10 @@ class Brand extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['brands'] = $this->brand_model->getBrands();
+		$data['products'] = $this->product_model->getProducts();
 
 		$this->load->view('header');
-		$this->load->view('brand', $data);
+		$this->load->view('product', $data);
 		$this->load->view('footer');
 	}
 
@@ -51,7 +51,7 @@ class Brand extends CI_Controller {
 	public function create()
 	{
 		$this->load->view('header');
-		$this->load->view('createbrand');
+		$this->load->view('createproduct');
 		$this->load->view('footer');
 	}
 
@@ -113,7 +113,7 @@ class Brand extends CI_Controller {
 	{
 		$id = $this->uri->segment(3);
 
-		$query = $this->db->delete('brands', array('id_brand' => $id));
+		$query = $this->db->delete('products', array('id_brand' => $id));
 
 		if($query)
 		{
@@ -134,7 +134,7 @@ class Brand extends CI_Controller {
 			$this->session->set_userdata($data);
 		}
 
-		redirect('brand');
+		redirect('product');
 	}
 
 	/**
