@@ -10,22 +10,13 @@
         <!-- Left col -->
         <section class="col-lg-12 connectedSortable">
           <!-- Custom tabs (Charts with tabs)-->
-          <div class="nav-tabs-custom">
-            <div class="tab-content no-padding">
-              <!-- Morris chart - Sales -->
-              <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 450px; background-color: #FDFDFD;">
-                <center>
-                  <img src="<?php echo base_url(); ?>template/dist/img/logo grupososasrl.jpg" class="img-responsive" style="padding-top: 20px;">
-                  <div style="padding: 20px;" class="col-md-12">
-                  </div>
-                  <div style="font-size:30px;" class="col-md-12">
-                    Sistema de Facturación
-                  </div>
-                  <hr>
-                </center>
-              </div>
+          <center>
+            <img src="<?php echo base_url(); ?>template/dist/img/logo grupososasrl.jpg" class="img-responsive" style="padding-top: 20px;">
+            <div style="font-size:50px;" class="col-md-12">
+              Sistema de Facturación
             </div>
-          </div>
+            <hr>
+          </center>
           <!-- /.nav-tabs-custom -->
         </section>
         <!-- /.Left col -->

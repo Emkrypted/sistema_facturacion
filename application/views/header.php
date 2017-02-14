@@ -42,12 +42,11 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
-    </a>
+    <div class="logo" style="height: 50px;">
+      <center>
+        <img src="<?php echo base_url(); ?>template/dist/img/grupososasrl.jpg" class="img-responsive" style=" padding-top:2px;">
+      </center>
+    </div>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
@@ -64,38 +63,38 @@
         <li class="header">MENÚ</li>
         <li>
           <a href="<?php echo base_url(); ?>">
-            <i class="fa fa-dashboard"></i> <span>Inicio</span>
+            <i class="fa fa-cogs" aria-hidden="true"></i> <span>Inicio</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Almacen</span>
+            <i class="fa fa-cubes" aria-hidden="true"></i> <span>Almacen</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>category"><i class="fa fa-circle-o"></i> Categoría</a></li>
-            <li><a href="<?php echo base_url(); ?>presentation"><i class="fa fa-circle-o"></i> Presentación</a></li>
-            <li><a href="<?php echo base_url(); ?>brand"><i class="fa fa-circle-o"></i> Marca</a></li>
-            <li><a href="<?php echo base_url(); ?>product"><i class="fa fa-circle-o"></i> Producto</a></li>
+            <li><a href="<?php echo base_url(); ?>category"><i class="fa fa-check-circle" aria-hidden="true"></i> Categoría</a></li>
+            <li><a href="<?php echo base_url(); ?>presentation"><i class="fa fa-check-circle" aria-hidden="true"></i> Presentación</a></li>
+            <li><a href="<?php echo base_url(); ?>brand"><i class="fa fa-check-circle" aria-hidden="true"></i> Marca</a></li>
+            <li><a href="<?php echo base_url(); ?>product"><i class="fa fa-check-circle" aria-hidden="true"></i> Producto</a></li>
           </ul>
         </li>
         <li>
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Compras</span>
+            <i class="fa fa-shopping-cart" aria-hidden="true"> </i><span>Compras</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>supplier"><i class="fa fa-circle-o"></i> Proveedor</a></li>
-            <li><a href="<?php echo base_url(); ?>buy"><i class="fa fa-circle-o"></i> Compras</a></li>
+            <li><a href="<?php echo base_url(); ?>supplier"><i class="fa fa-check-circle" aria-hidden="true"></i> Proveedor</a></li>
+            <li><a href="<?php echo base_url(); ?>buy"><i class="fa fa-check-circle" aria-hidden="true"></i> Compras</a></li>
           </ul>
         </li>
         <li>
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Ventas</span>
+            <i class="fa fa-line-chart" aria-hidden="true"></i> <span>Ventas</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -109,9 +108,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>category"><i class="fa fa-circle-o"></i> Inventario Inicial</a></li>
-            <li><a href="<?php echo base_url(); ?>presentation"><i class="fa fa-circle-o"></i> Abrir Nuevo Inventario</a></li>
-            <li><a href="<?php echo base_url(); ?>brand"><i class="fa fa-circle-o"></i> Saldos y Movimientos</a></li>
+            <li><a href="<?php echo base_url(); ?>category"><i class="fa fa-check-circle" aria-hidden="true"></i> Inventario Inicial</a></li>
+            <li><a href="<?php echo base_url(); ?>presentation"><i class="fa fa-check-circle" aria-hidden="true"></i> Abrir Nuevo Inventario</a></li>
+            <li><a href="<?php echo base_url(); ?>brand"><i class="fa fa-check-circle" aria-hidden="true"></i> Saldos y Movimientos</a></li>
           </ul>
         </li>
       </ul>

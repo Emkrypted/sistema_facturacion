@@ -1,5 +1,5 @@
-<footer class="main-footer" style="background-color: #FDFDFD;">
-    <strong>Copyright &copy; <?php echo date('Y'); ?> <a href="#">Grupo Sosa</a>.</strong> Todos los Derechos Reservados.
+<footer class="main-footer" style="background-color: #000000; color: #ffffff;">
+    Copyright &copy; <?php echo date('Y'); ?> <strong style="color: #ffffff;"> Grupo Sosa.</strong> Todos los Derechos Reservados.
   </footer>
 
   <!-- Add the sidebar's background. This div must be placed
